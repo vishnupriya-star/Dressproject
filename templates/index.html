@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiceShop</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--topbar-->
+  <div class="topbar">
+    <div class="phone">
+        <img src="{% static 'image/phone.png' %}"  alt="phone.img">
+        <span>Need help? Call us +1 (234) 567-890</span>
+    </div>
+    <div class="offer">
+        <img src="{% static 'image/gift.png' %}" alt="gift.img">
+        <span>20% off on your first order</span>
+    </div>
+    <div class="moneyexchange">
+         EN | $ USD
+    </div>
+  </div>
+  <!--header-->
+  <div class="header">
+    <h2 class="logo">NiceShop</h2>
+    <div class="search-box">
+        <input type="search" placeholder="search for products">
+        <button><img src="{% static 'icons/search-magnifying-glass-white-icon.png' %}"  style="width:10px;"alt="search.img"></button>
+    </div>
+    <div class="icons">
+        <img src="{% static 'image/member icon.png' %}" class="member" onclick="memberLogin()" alt="member.img">
+        <img src="{% static 'image/heart icon.png' %}"  class="heart" alt="heart.img">
+        <img src="{% static 'image/trolly.png' %}" class="trolly" alt="trolly.img">
+    </div>
+  </div>
+  <!--navbar-->
+  <div class="nav-bar">
+    <ul class="nav-links">
+        <li><a href="{% url 'home' %}"></a>">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="{% url 'product' %}">ProductDetails</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Checkout</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+  </div>
+  <!--hero section-->
+  <section class="hero">
+    <div class="main">
+        <!--left side-->
+        <div class="left">
+            <h1>Discover Amazing <br>Products</h1>
+            <p>Explore our curated collection of premium items designed to enhance your 
+                lifestyle. From fashion to tech, find everything you need with exclusive
+                deals and fast shipping.
+            </p>
+            <button class="shopnow">Shop Now</button>
+            <button class="browse">Browse Categories</button>
+            <div class="callersupport">
+                <div class="freeshipping">
+                    <img src="{% static 'image/transport.png' %}" style="width:18px;" alt="transport">
+                    <span>Free Shipping</span>
+                </div>
+                <div class="quality">
+                    <img src="{% static 'image/quality.png'%}" style="width:18px;" alt="quality">
+                    <span>Quality Guarantee</span>
+                </div>
+                <div class="support">
+                    <img src="{% static 'image/caller support.png' %}"  style="width:15px;" alt="24/7">
+                    <span>24/7Support</span>
+                </div>
+            </div>
+        </div>
+     <!--right side-->
+     <div class="right">
+        <div class="topbadge">Bestseller</div>
+        <div class="image">
+            <img src="{% static 'image/sofa.png' %}" alt="sofa">
+        </div>   
+        <h5>Premium Wireless Headphones</h5>
+        <p><strong style="color:black;font-weight: bold;font-size:30px;">$299</strong> 
+        <del>$399</del></p>
+      </div>
+    </div>
+ </section>
+  <!--colletion-->
+  <div class="collection">
+    <!--left-side-->
+    <div class="left-side">
+        <div class="tag">TRENDING NOW</div>
+        <h1>New Summer Collection</h1>
+        <p>Discover our latest arrivals designed for the modern lifestyle. 
+            Elegant, comfortable, and sustainable fashion for every occasion.
+        </p>
+        <button> Explore Collection →</button>
+        <div class="left-img">
+            <img src="{% static 'image/lady image.png' %}" alt="lady's img">
+        </div>
+    </div>
+    <!--right-side-->
+    <div class="right-side">
+        <div class="card" style="background-color:#e0e8fa;">
+            <div class="text">
+                <h6>Men's Wear</h6>
+                <p>242 products</p>
+                <span>Shop Now→</span>
+            </div>
+            <div class="men-image">
+                <img src="{% static 'image/men image.png' %}" alt="Men's img">
+            </div>
+        </div>
+        <div class="card" style="background-color:#faf8e0;">
+            <div class="text">
+                <h6>Kid's Fashion</h6>
+                <p>185 products</p>
+                <span>Shop Now→</span>
+            </div>
+            <div class="kids-image">
+                <img src="{% static 'image/black shoe.png' %}" alt="Kid's img">
+            </div>
+        </div>
+        <div class="card" style="background-color:#f7e5f2;">
+            <div class="text">
+                <h6>Beauty Products</h6>
+                <p>127 products</p>
+                <span>Shop Now→</span>
+            </div>
+            <div class="beauty-image">
+                <img src="{% static 'image/sun glass.png' %}" alt="beauty img">
+            </div>
+        </div>
+        <div class="card" style="background-color:#e8fae0;">
+            <div class="text">
+                <h6>Accessories</h6>
+                <p>308 products</p>
+                <span>Shop Now→</span>
+            </div>
+            <div class="access-image">
+                <img src="{% static 'image/white shoe.png' %}" alt="access img">
+            </div>
+        </div>
+    </div>
+ </div>
+ <!--products-->
+ <div class="products">
+    <h2>Best Sellers</h2>
+    <img src="{% static 'image/images-removebg-preview.png' %}" style="width:60px;height:auto;" alt="line">
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <div class="product-grid">
+        <div class="grid">
+            <div class="badge">LIMITED</div>
+            <img src="{% static 'image/bag.png' %}" alt="bag">
+            <div class="content">
+                <h5>PREMIUM COLLECTION</h5>
+                <P>Mayuris blandit aliquet elit amet</P>
+                <div class="rating">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}"  style="width:60px;height: auto;"alt="4.5 star">
+                </div>
+                <span class="price">$189.00</span>
+                <div class="colors">
+                    <span class="circle blue"></span>
+                    <span class="circle green"></span>
+                    <span class="circle red"></span>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="badge-red">25% OFF</div>
+            <img src="{% static 'image/t-shirt.png' %}" alt="bag">
+            <div class="content">
+                <h5>BEST SELLERS</h5>
+                <P>Sed do eiusmod tempor incididunt</P>
+                <div class="rating">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" style="width:60px;height:auto;" alt="4.5star">
+                </div>
+                <span class="price"> <del>$240</del> $180.0</span>
+                <div class="colors">
+                    <span class="circle blue"></span>
+                    <span class="circle red"></span>
+                    <span class="circle green"></span>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <img src="{% static 'image/half-top.png' %}" alt="bag">
+            <div class="content">
+                <h5>NEW ARRIVALS</h5>
+                <P>Lorem ipsum dolor sit amet consectetur</P>
+                <div class="rating">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" style="width:60px;height:auto;"  alt="4.5star">
+                </div>
+                <span class="price">$95.00</span>
+                <div class="colors">
+                    <span class="circle blue"></span>
+                    <span class="circle red"></span>
+                    <span class="circle green"></span>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="badge">TRENDING</div>
+            <img src="{% static 'image/men t-shirt.png' %}" alt="bag">
+            <div class="content">
+                <h5>DESIGNER SERIES</h5>
+                <P>Ut enim ad minim veniam quis</P>
+                <div class="rating">
+                    <img src="{% static 'icons/five-star-rating-icon.png' %}" style="width:60px;height:auto;" alt="5 star">
+                </div>
+                <span class="price">$165.00</span>
+                <div class="colors">
+                    <span class="circle blue"></span>
+                    <span class="circle red"></span>
+                    <span class="circle green"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!---------three column section--------->
+ <section class="triple-section">
+    <div class="column">
+        <h3>Treanding Now</h3>
+        <div class="item">
+            <img src="{% static 'image/leather bag.png' %}" alt="leather bag.img">
+            <div class="txt">
+                <p>Premium Leather Tote</p>
+                <div class="stars">
+                    <img src="{% static 'icons/five-star-rating-icon.png' %}"  alt="5star">
+                    <span>(24)</span>
+                </div>
+                <h5>$87.50</h5>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'image/glass.png' %}" alt="glass.img">
+            <div class="txt">
+                <p style="margin-right: 20px;">Statement Earrings</p>
+                <div class="stars">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(41)</span>
+                </div>
+                <h5>$39.99</h5>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'image/slipper.png' %}" alt="slipper.img">
+            <div class="txt">
+                <p style="margin-right:15px;">Organic Cotton Shirt</p>
+                <div class="stars">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(18)</span>
+                </div>
+                <h5>$45.00</h5>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <h3>Best Sellers</h3>
+        <div class="item">
+            <img src="{% static 'image/chair.png' %}" alt="chair.img">
+            <div class="txt">
+                <p style="margin-right:25px;">Slim Fit Denim</p>
+                <div class="stars">
+                    <img src="{% static 'icons/five-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(87)</span>
+                </div>
+                <h5>$68.00 <del>$80.00</del></h5>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'image/lap bag.png' %}" alt="lap bag.img">
+            <div class="txt">
+                <p>Designer Handbag</p>
+                <div class="stars">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(56)</span>
+                </div>
+                <h5>$129.99</h5>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'image/leather shoe.png' %}" alt=" leather shoe.img">
+            <div class="txt">
+                <p>Leather Crossbody</p>
+                <div class="stars">
+                    <img src="{% static 'icons/five-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(112)</span>
+                </div>
+                <h5>$95.50</h5>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <h3>Featured Items</h3>
+        <div class="item">
+            <img src="{% static 'image/midi skirt.png' %}" alt="midi skirt.img">
+            <div class="txt">
+                <p style="margin-right:15px;">Pleated Midi Skirt</p>
+                <div class="stars">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(32)</span>
+                </div>
+                <h5>$75.00</h5>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'image/large t-shirt.png' %}" alt=" large tshirt.img">
+            <div class="txt">
+                <p>Geometric Earrings</p>
+                <div class="stars">
+                    <img src="{% static 'icons/four-half-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(47)</span>
+                </div>
+                <h5>$42.99</h5>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'image/reuseable bag.png' %}" alt="reuseable bag.img">
+            <div class="txt">
+                <p>Structured Satchel</p>
+                <div class="stars">
+                    <img src="{% static 'icons/five-star-rating-icon.png' %}" alt="4.5star">
+                    <span>(64)</span>
+                </div>
+                <h5>$89.99</h5>
+            </div>
+        </div>
+    </div>
+ </section>
+  <!---sale--->
+  <div class="sales">
+    <div class="tags">
+        Limited Time
+        <span>50% OFF</span>
+    </div>  
+    <h2>Exclusive Flash Sale</h2>
+    <p>Don't miss out on our biggest sale of the year. Premium quality products at<br>
+        unbeatable prices for the next 48 hours only
+    </p>
+    <div class="timesOut"><div class="days">
+        <b style="font-size:30px;">-124</b> <br>
+        <span style="font-size:10px;">DAYS</span>
+    </div>
+    <div class="hours">
+        <b style="font-size:30px;">-18</b> <br>
+        <span style="font-size:10px;">HOURS</span>
+    </div>
+    <div class="minutes">
+        <b style="font-size:30px;">-17</b><br>
+        <span style="font-size:10px;">MINUTES</span>
+    </div>
+    <div class="seconds">
+        <b style="font-size:30px;">-11</b> <br>
+        <span style="font-size:10px;">SECONDS</span>
+    </div>
+  </div>
+    <button class="shop-btn">SHOP NOW</button>
+    <button class="all">View All deals</button>
+  </div>
+  <!-------show-products----->
+  <div class="show-products">
+    <div class="view">
+        <div class="top-badge">-45%</div>
+        <img src="{% static 'image/slipper.png' %}" alt="slipper.img">
+        <div class="show">
+            <h5>Premium Wireless Headphones</h5>
+            <div class="amt">
+                <del>$129</del>
+                <span>$71</span>
+            </div>
+            <div class="rating">
+                <img src="{% static 'icons/five-star-rating-icon.png' %}" style="width:auto;height:60px;"alt="5 star">
+                <span>(324)</span>
+            </div>
+        </div>
+    </div>
+    <div class="view">
+        <div class="top-badge">-60%</div>
+        <img src="{% static 'image/half-top.png' %}" alt="halftop.img">
+        <div class="show">
+            <h5>Smart Fitness Tracker</h5>
+            <div class="amt">
+                <del>$89</del>
+                <span> $36</span>
+            </div>
+            <div class="rating">
+                <img src="{% static 'icons/four-half-star-rating-icon.png' %}" style="width:auto;height:60px;"alt="5 star">
+                <span>(198)</span>
+            </div>
+        </div>
+    </div>
+    <div class="view">
+        <div class="top-badge">-35%</div>
+        <img src="{% static 'image/modern shoe.png' %}" alt="shoe.img">
+        <div class="show">
+            <h5>Luxury Travel Backpack</h5>
+            <div class="amt">
+                <del>$159</del>
+                <span>$103</span>
+            </div>
+            <div class="rating">
+                <img src="{% static 'icons/five-star-rating-icon.png' %}" style="width:auto;height:60px;"alt="5 star">
+                <span>(267)</span>
+            </div>
+        </div>
+    </div>
+    <div class="view">
+        <div class="top-badge">-55%</div>
+        <img src="{% static 'image/bag.png' %}" alt="bag.img">
+        <div class="show">
+            <h5>Artisan Coffee Mug Set</h5>
+            <div class="amt">
+                <del>$75</del>
+                <span>$34</span>
+            </div>
+            <div class="rating">
+                <img src="{% static 'icons/four-half-star-rating-icon.png' %}" style="width:auto;height:60px;"alt="5 star">
+                <span>(267)</span>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-------footer------->
+  <div class="footer">
+    <div class="part">
+        <div class="niceshop">
+            <h3>NiceShop</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in nibh vehicula, 
+                facilisis magna ut, consectetur lorem.
+            </p>
+            <h5>Connect With Us</h5>
+            <div class="social-icons">
+                <div class="facebook">
+                    <img src="{% static 'icons/facebook-app-round-white-icon.png' %}" style="width:23px;" alt="facebook">
+                </div>
+                <div class="whatsapp">
+                    <img src="{% static 'icons/whatsapp-white-icon.png' %}"  style="width:19px;"alt="whatsapp">
+                </div>
+                <div class="instagram">
+                    <img src="{% static 'icons/instagram-white-icon.png' %}"  style="width:19px;"alt="instagram">
+                </div>
+                <div class="xtwitter">
+                    <img src="{% static 'icons/x-social-media-white-icon.png' %}"  style="width:20px;" alt="x twitter">
+                </div>
+                <div class="youtube">
+                    <img src="{% static 'icons/youtube-app-white-icon.png' %}" style="width:23px;" alt="youtube">
+                </div>
+            </div>
+        </div>
+        <div class="shop">
+            <h3>Shop</h3>
+            <p>→NewArrivals <br>→BestSellers <br>→Women's Clothing <br>→Men's Clothing <br>
+                →Accessories <br>→Sale
+            </p>
+        </div>
+        <div class="support">
+            <h3>Support</h3>
+            <p>→HelpCenter <br>→OrderStatus <br>→Shipping Info <br>→Returns & Exchanges <br>
+                →Size Guide <br>→Contact Us
+            </p>
+        </div>
+        <div class="ContactInformation">
+            <h3>Contact Information</h3>
+            <div class="address">
+                <img src="{% static 'icons/home-button-white-icon.png' %}" style="width:18px;" alt="address">
+                <span> 123 Fashion Street, New York, NY 10001</span>
+            </div>
+            <div>
+                <img src="{% static 'icons/phone-call-white-icon.png' %}" style="width:17px;"  alt="phone">
+                <span>+1 (555) 123-4567</span>
+            </div>
+            <div>
+                <img src="{% static 'icons/email-envelope-white-icon.png' %}"style="width:17px;"  alt="email">
+                <span> hello@example.com</span>
+            </div>
+            <div class="time">
+                <img src="{% static 'icons/timing-clock-white-icon.png' %}" style="width:17px;" alt="clock">
+                <span>Monday-Friday: 9am-6pm <br>Saturday: 10am-4pm  <br>Sunday: Closed</span> 
+            </div>
+            <div class="btn">
+                <span class="appstore">AppStore</span>
+                <span class="google">GooglePlay</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!---final footer--->
+    <div class="lst">
+        <div class="lst-left">
+            <p>© Copyright <span style="color:white;"> NiceShop</span>. All Rights Reserved. Designed by 
+                <span style="color:white;">BootstrapMade</span>
+            </p>
+        </div>
+        <div class="lst-right">
+            <span>Terms</span>
+            <span>Privacy</span>
+            <span>cookies</span>
+        </div>
+    </div>
+  </div>
+  <script src="{% static 'js/product.js' %}"></script>
+ </body>
+</html>

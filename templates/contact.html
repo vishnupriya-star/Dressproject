@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+    <div class="map-img">
+        <img src="{% static 'image/map location.jpeg' %}" alt="map image">
+    </div>
+    <section class="Contact-sec">
+        <div class="left-side">
+            <div class="addresss">
+                <img src="{% static 'icons/location-pointer-white-icon.png' %}" alt="location img">
+                <div class="add-cnt">
+                    <h2>Address</h2>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+            </div>
+            <div class="phone">
+                <img src="{% static 'icons/phone-call-white-icon.png' %}" alt="phone img">
+                <div class="add-cnt">
+                    <h2>Call US</h2>
+                    <p>+1 5589 55488 55</p>
+                </div>
+            </div>
+            <div class="email">
+                <img src="{% static 'icons/email-envelope-white-icon.png' %}" alt="email img">
+                <div class="add-cut">
+                    <h2>Email US</h2>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="form">
+                <input type="text"  id="Name" placeholder="Your Name">
+                <input type="text" id="Email" placeholder=" Your Email">
+                <br><br>
+                <input type="text" id="Subject" placeholder="Subject">
+                <br><br>
+                <input type="text" id="Message" placeholder="Message"><br><br>
+                <button onclick="Register()">Send Message</button>
+                <h2 id="Result"></h2>
+            </div>
+        </div>
+    </section>
+    
+  <!-------footer------->
+  <div class="footer">
+    <div class="part">
+        <div class="niceshop">
+            <h3>NiceShop</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in nibh vehicula, 
+                facilisis magna ut, consectetur lorem.
+            </p>
+            <h5>Connect With Us</h5>
+            <div class="social-icons">
+                <div class="facebook">
+                    <img src="{% static 'icons/facebook-app-round-white-icon.png' %}" style="width:23px;" alt="facebook">
+                </div>
+                <div class="whatsapp">
+                    <img src="{% static 'icons/whatsapp-white-icon.png' %}"  style="width:19px;"alt="whatsapp">
+                </div>
+                <div class="instagram">
+                    <img src="{% static 'icons/instagram-white-icon.png' %}"  style="width:19px;"alt="instagram">
+                </div>
+                <div class="xtwitter">
+                    <img src="{% static 'icons/x-social-media-white-icon.png' %}"  style="width:20px;" alt="x twitter">
+                </div>
+                <div class="youtube">
+                    <img src="{% static 'icons/youtube-app-white-icon.png' %}" style="width:23px;" alt="youtube">
+                </div>
+            </div>
+        </div>
+        <div class="shop">
+            <h3>Shop</h3>
+            <p>→NewArrivals <br>→BestSellers <br>→Women's Clothing <br>→Men's Clothing <br>
+                →Accessories <br>→Sale
+            </p>
+        </div>
+        <div class="support">
+            <h3>Support</h3>
+            <p>→HelpCenter <br>→OrderStatus <br>→Shipping Info <br>→Returns & Exchanges <br>
+                →Size Guide <br>→Contact Us
+            </p>
+        </div>
+        <div class="ContactInformation">
+            <h3>Contact Information</h3>
+            <div class="address">
+                <img src="{% static 'icons/home-button-white-icon.png' %}" style="width:18px;" alt="address">
+                <span> 123 Fashion Street, New York, NY 10001</span>
+            </div>
+            <div>
+                <img src="{% static 'icons/phone-call-white-icon.png'%}" style="width:17px;"  alt="phone">
+                <span>+1 (555) 123-4567</span>
+            </div>
+            <div>
+                <img src="{% static 'icons/email-envelope-white-icon.png' %}"style="width:17px;"  alt="email">
+                <span> hello@example.com</span>
+            </div>
+            <div class="time">
+                <img src="{% static 'icons/timing-clock-white-icon.png' %}" style="width:17px;" alt="clock">
+                <span>Monday-Friday: 9am-6pm <br>Saturday: 10am-4pm  <br>Sunday: Closed</span> 
+            </div>
+            <div class="btn">
+                <span class="appstore">AppStore</span>
+                <span class="google">GooglePlay</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!---final footer--->
+    <div class="lst">
+        <div class="lst-left">
+            <p>© Copyright <span style="color:white;"> NiceShop</span>. All Rights Reserved. Designed by 
+                <span style="color:white;">BootstrapMade</span>
+            </p>
+        </div>
+        <div class="lst-right">
+            <span>Terms</span>
+            <span>Privacy</span>
+            <span>cookies</span>
+        </div>
+    </div>
+  </div>
+  <script src="{% static 'js/contact.js' %}"></script>
+</body>
+     
